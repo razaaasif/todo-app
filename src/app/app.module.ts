@@ -11,6 +11,7 @@ import { RouterModule } from '@angular/router';
 import { routes } from './app.routing.module';
 import { AboutComponent } from './app-about';
 import { ContactComponent } from './app-contact';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { ContactComponent } from './app-contact';
     ReactiveFormsModule,
     RouterModule.forRoot(routes),
   ],
-  providers: [],
+  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
