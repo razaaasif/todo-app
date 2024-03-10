@@ -1,2 +1,10 @@
-<app-navbar></app-navbar>
-<router-outlet></router-outlet>
+<div class="container">
+  <ng-template #myTemplate let-text="name">
+    <div class="alert alert-primary" role="alert">
+     {{text}}
+    </div>
+  </ng-template>
+  <div *ngTemplateOutlet="myTemplate; context: { name: 'RCM' }"></div>
+  <div *ngTemplateOutlet="myTemplate; context: { name: 'MCA' }"></div>
+
+</div>

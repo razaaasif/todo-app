@@ -10,4 +10,5 @@ export class AppComponent {
   addTodo(event: any) {
     this.todos.push(event);
   }
+  name = 'RCM';
 }
